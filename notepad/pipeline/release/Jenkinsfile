@@ -35,7 +35,7 @@ podTemplate(label: 'release',
           chmod -R 600 /root/.ssh/id_rsa
           echo "    IdentityFile ~/.ssh/id_rsa" >> /etc/ssh/ssh_config
           ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
-          git clone git@github.com:helmi78/notepad.git
+          git clone https://github.com/helmi78/notepad.git
           cd notepad
           git config --global user.email "jenkins@helmi78.com"
           git config --global user.name "Jenkins"
