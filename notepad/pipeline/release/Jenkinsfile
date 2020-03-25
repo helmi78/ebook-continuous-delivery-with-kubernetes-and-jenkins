@@ -39,6 +39,7 @@ podTemplate(label: 'release',
           cd notepad
           git config --global user.email "jenkins@helmi78.com"
           git config --global user.name "Jenkins"
+          git remote set-url origin https://github.com/helmi78/notepad.git
           mvn -B -s /etc/maven/settings.xml release:prepare "-DreleaseVersion=${RELEASE_VERSION}" "-DdevelopmentVersion=${NEW_VERSION}" release:perform -Darguments="-DskipTests"
         """
       }
