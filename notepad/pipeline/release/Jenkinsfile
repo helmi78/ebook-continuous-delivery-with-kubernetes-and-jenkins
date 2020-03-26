@@ -37,8 +37,8 @@ podTemplate(label: 'release',
           ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
           git clone https://github.com/helmi78/notepad.git
           cd notepad
-          git config --global user.email "jenkins@helmi78.com"
-          git config --global user.name "Jenkins"
+          git config --global user.email "helmihassine@gmail.com"
+          git config --global user.name "helmi78"
           git remote set-url origin https://github.com/helmi78/notepad.git
           mvn -B -s /etc/maven/settings.xml release:prepare "-DreleaseVersion=${RELEASE_VERSION}" "-DdevelopmentVersion=${NEW_VERSION}" release:perform -Darguments="-DskipTests"
         """
